@@ -1,0 +1,1 @@
+This is a Ionic/Angular basic app with localisation/translation feature using ngx-translate 
