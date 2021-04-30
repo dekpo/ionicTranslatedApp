@@ -8,5 +8,8 @@
     "ALERT": {
         "header": "Error",
         "msg": "Hubo un problema con su operación"
+    },
+    "POPFLAGS":{
+        "title": "Traducir"
     }
 }

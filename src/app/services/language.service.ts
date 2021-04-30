@@ -28,8 +28,9 @@ export class LanguageService {
 
   getLanguages() {
     return [
-      { text: 'English', value: 'en', img: 'assets/imgs/en.png' },
-      { text: 'German', value: 'de', img: 'assets/imgs/de.png' },
+      { text: 'Français', value: 'fr', img: 'assets/flags/fr.png' },
+      { text: 'Español', value: 'es', img: 'assets/flags/es.png' },
+      { text: 'English', value: 'en', img: 'assets/flags/en.png' }
     ];
   }
 
@@ -37,5 +38,15 @@ export class LanguageService {
     this.translate.use(lng);
     this.selected = lng;
     this.storage.set(LNG_KEY, lng);
+  }
+
+  async getCurrentLanguage(){
+    let language = this.translate.getBrowserLang();
+    await this.storage.get(LNG_KEY).then(val => {
+      if (val) {
+        language = val;
+      }
+    });
+    return language;
   }
 }

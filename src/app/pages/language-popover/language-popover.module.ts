@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LanguagePopoverPageRoutingModule } from './language-popover-routing.module';
 
 import { LanguagePopoverPage } from './language-popover.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LanguagePopoverPageRoutingModule
+    LanguagePopoverPageRoutingModule,
+    TranslateModule
   ],
   declarations: [LanguagePopoverPage]
 })
