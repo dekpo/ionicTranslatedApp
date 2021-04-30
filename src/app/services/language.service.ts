@@ -10,7 +10,9 @@ const LNG_KEY = 'SELECTED_LANGUAGE';
 export class LanguageService {
   selected = '';
 
-  constructor(private translate: TranslateService, private storage: Storage) { }
+  constructor(private translate: TranslateService, private storage: Storage) {
+    this.storage.create();
+   }
 
   setInitialAppLanguage() {
     let language = this.translate.getBrowserLang();

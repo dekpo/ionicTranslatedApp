@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      {{ 'HOME.title' | translate }}
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openLanguagePopover($event)">
+        <ion-icon name="earth" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content class="ion-padding">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+  {{'HOME.greeting' | translate:params }}
+ <!-- With directive -->
+ <p><ion-text color="secondary" [translate]="'HOME.greeting'" [translateParams]="params"></ion-text></p>
+
+ <!-- With directive and html -->
+ <p><ion-text color="secondary" [innerHTML]="'HOME.withcode' | translate"></ion-text></p>
+
+ <ion-button expand="block" (click)="showAlert()">
+   {{ 'HOME.btn' | translate }}
+ </ion-button>
+
   </div>
 </ion-content>

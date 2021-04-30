@@ -1,8 +1,8 @@
 {
     "HOME": {
         "title": "Accueil",
-        "salut": "Hé {{name}}! Bienvenue dans cette App Ionic!",
-        "withcode": "<br><br>Vous êtes<b> bien brâve</b>!",
+        "greeting": "Hé {{name}}! Bienvenue dans cette App Ionic!",
+        "withcode": "<br><br>Vous êtes<b> bien brave</b>!",
         "btn": "Afficher l'alerte"
     },
     "ALERT": {
